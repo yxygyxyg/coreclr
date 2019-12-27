@@ -270,10 +270,7 @@ jobs:
       osGroup: Windows_NT
       managedTestBuildOsGroup: Windows_NT
       helixQueues:
-      # NOTE: there are no queues specified for Windows_NT_arm public with helixQueueGroup='pr'. This means that specifying
-      # Windows_NT_arm for a PR job causes a build, but no test run. If the test build and test runs were separate jobs,
-      # this could be more explicit (and less subtle).
-      - ${{ if and(eq(variables['System.TeamProject'], 'public'), in(parameters.helixQueueGroup, 'ci', 'corefx')) }}:
+      - ${{ if and(eq(variables['System.TeamProject'], 'public'), in(parameters.helixQueueGroup, 'pr', 'ci', 'corefx')) }}:
         - Windows.10.Arm64.Open
       - ${{ if eq(variables['System.TeamProject'], 'internal') }}:
         - Windows.10.Arm64
