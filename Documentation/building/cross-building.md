@@ -26,7 +26,7 @@ Requirements for targetting Debian based distros
 
 You need a Debian based host and the following packages need to be installed:
 
-    ben@ubuntu ~/git/coreclr/ $ sudo apt-get install qemu qemu-user-static binfmt-support debootstrap
+    ben@ubuntu ~/git/coreclr/ $ sudo apt-get install qemu qemu-user-static binfmt-support debootstrap curl libxml2-utils rpm2cpio
 
 In addition, to cross compile CoreCLR the binutils for the target are required. So for arm you need:
 
